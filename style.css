@@ -1,0 +1,16 @@
+.body {
+    height: auto;
+}
+
+
+.button {
+    border: 1px solid darkslategray;
+    border-radius: 10px;
+    color: darkslategray;
+    padding: 6px;
+    margin-top: -50px;
+    transition: background 300ms ease-in;
+}
+.button:hover {
+    background: #f4f4f4;
+}
