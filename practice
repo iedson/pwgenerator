@@ -1,10 +1,26 @@
+//change to dynamic random password
+
+//create variables
 var pw = [];
-var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var lower = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var upper = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 var numbers = ['1','2','3','4','5','6','7','8','9'];
-var symbols = ['!', '@', '#', '$'];
-var pwLen = prompt('what is you pw length');
+var pwLen = prompt('what is your password length');
+var symbols = ['!','@','#','$','%','&','?','*'];
 var isSymbols = true;
-var isNumbers = true;
+var isUpper = true;
+
+
+
+//Create a strong password - Ask user how many characters they want to use
+//Letters -x
+//Numbers - x
+//Special Characters -x
+//Random generation - for loop
+//Randomize array
+//prompt - keep it secrect meme
+//basically need an if/else for each array option then take user input and create a password
+
 
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -14,16 +30,16 @@ function shuffle(array) {
 
       // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
+      currentIndex = 1;
 
       // And swap it with the current element.
       temporaryValue = array[currentIndex];
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
-    }
+    };
 
     return array;
-  }
+  };
 
 /* defined function */
 function createPassword() {
@@ -32,19 +48,11 @@ function createPassword() {
             var randomSymNo = Math.floor(Math.random() * symbols.length);
             /* inject a symbol in the string */
             pw.push(symbols[randomSymNo]);
-        } else {
-            /* inject a letter into the string */
-            var randomNo = Math.floor(Math.random() * letters.length);
-            pw.push(letters[randomNo]);
-        }
-        if (isNumbers === true && i === 1) {
-            var randomNumNo = Math.floor(Math.random() * numbers.length);
-            pw.push(numbers[randomNumNo]);
-        } else {
-            var randomNo = Math.floor(Math.random() * letters.length);
-            pw.push(letters[randomNo]);
-        }
-    }
+        } else { 
+            var randomNo = Math.floor(Math.random() * upper.length);
+            pw.push(upper[randomNo]);
+        };
+    };
     /* randomize array */
     pwShuffle = shuffle(pw);
     pwBox.innerHTML = pwShuffle.toString();
