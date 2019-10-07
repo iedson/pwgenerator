@@ -9,14 +9,18 @@
     <link rel="stylesheet" href="./style.css">
 
 </head>
-<body class="body" class="container">
-    <h1>Use the Generator to Create a Secure Password</h1>
-    <!---Replace content of this div with the password-->
-    <div id="pwBox">Password</div>
-    <!---Button to generate password-->
-    <button id="genBtn" onclick="createPassword()">Generate</button>
-    <!---Button to copy to clipboard-->
-    <button onclick="copyPass()">Copy</button>
+<body class="body" background="https://images.unsplash.com/photo-1507750283531-b27e551bc86b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80">
+    <div class="container">
+        <h1 class="row" class="display-3" class="text-center">Use the Generator to Create a Secure Password</h1>
+        <!---Replace content of this div with the password-->
+        <div id="pwBox" class="row" class="text-center">Follow the prompts to get your new password</div>
+        <div class="row">
+            <!---Button to generate password-->
+            <button id="genBtn" onclick="createPassword()" class="col-md-2" type="button" class="btn btn-info">Generate</button>
+            <!---Button to copy to clipboard-->
+            <button onclick="copyPass()" class="col-md-2" class="col-md-2" type="button" class="btn btn-info">Copy</button>
+        </div>
+    </div>
 
     <script src="./app.js"></script>
 </body>

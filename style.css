@@ -1,16 +1,13 @@
-.body {
-    height: auto;
+body {
+    margin: 5rem;
+    padding: 5rem;
 }
 
+.container {
+    border: 1px solid black;
+}
+.row {
+    border: 1px solid black;
+    background-color: aliceblue;
+}
 
-.button {
-    border: 1px solid darkslategray;
-    border-radius: 10px;
-    color: darkslategray;
-    padding: 6px;
-    margin-top: -50px;
-    transition: background 300ms ease-in;
-}
-.button:hover {
-    background: #f4f4f4;
-}
