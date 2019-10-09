@@ -35,11 +35,11 @@ function createPassword() {
             /* inject a symbol in the string */
             pw.push(symbols[randomSymNo]);
         } 
-        if (isNumbers === true && i === 1) {
+        if (isNumbers === true && i === 0) {
             var randomNumNo = Math.floor(Math.random() * numbers.length);
             pw.push(numbers[randomNumNo]);
         } 
-        if (isUpper === true && i === 2) {
+        if (isUpper === true && i === 0) {
             var randomUppNo = Math.floor(Math.random() * upper.length);
             pw.push(upper[randomUppNo]);
         } else {
@@ -53,7 +53,7 @@ function createPassword() {
 };
 
 
-//copy to clipboard
+//copy to clipboard - do i need to add an event listner to this? 
 function copyPass() {
     var str = document.getElementById("pwBox").innerHTML;
     function listener(e) {
@@ -61,7 +61,11 @@ function copyPass() {
       e.clipboardData.setData("text/plain", str);
       e.preventDefault();
     }
-};
+    document.addEventListener("copy", listener);
+    document.execCommand("copy");
+    document.removeEventListener("copy", listener);
+   }
+
 
 /* first event */
 // change this pw into a dynamic random pw
